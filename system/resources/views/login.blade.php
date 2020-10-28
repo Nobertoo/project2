@@ -13,7 +13,7 @@
   height: 100vh;
   justify-content:  center;
   align-items: center;
-  background-color: white;
+  background-image: url(public/images/baground1.jpg);
 }
 .log-1{
   width: 350px;
@@ -66,7 +66,7 @@
 			<form action="" method="">
 				<input type="text" name="user" placeholder="Username" class="input-control"> 
 				<input type="password" name="user" placeholder="Password" class="input-control"> 
-				<button type="submit" class="btn"><a href="{{ url('/')}}">Login</a></button>
+				<button type="submit" class="btn"><a href="{{ url('/home')}}">Login</a></button>
 			</form>
 		</div>
 	</body>

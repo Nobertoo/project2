@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/home', function () {
     return view('home');
@@ -36,3 +38,36 @@ Route::get('/contact', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/beranda', function () {
+    return view('beranda');
+});
+
+Route::get('/kategorilokal', function () {
+    return view('kategorilokal');
+});
+
+Route::get('/kategoriluar', function () {
+    return view('kategoriluar');
+});
+
+Route::get('/promo', function () {
+    return view('promo');
+});
+
+Route::get('/suplier', function () {
+    return view('suplier');
+});
+
+Route::get('/register_adm', function () {
+    return view('register_adm');
+});
+
