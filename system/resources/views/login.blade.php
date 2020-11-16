@@ -1,78 +1,79 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="widht=device-width, initial-scale">
-<!-- 	<link rel="stylesheet" type="text/css" href="css2/font-awesome.min.css"> -->
-	<title>Login</title>
-<style type="text/css">
-/*login*/
-#bg-login{
-  display: flex;
-  height: 100vh;
-  justify-content:  center;
-  align-items: center;
-  background-image: url(public/images/baground1.jpg);
-}
-.log-1{
-  width: 350px;
-  border-radius: 15px;
-  opacity: 0.8;
-  background-color: #696969;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
-.log-1 h2{
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.log-1 input{
-  width: 300px;
-  height: 30px;
-  border-radius: 3px;
-  border: none;
-}
-.input-control{
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Meramput Shop | Login</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.btn{
-  background-color: #fff;
-  padding: 8px 15px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.btn button{
-  color: black;
-}
-.btn:hover{
-  background-color: #dcdcdc;
-  color: black;
-}	
-</style>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{url('public')}}/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="{{url('public')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{url('public')}}/dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-		<body id="bg-login">
-		<div class="log-1">
-			<h2>Login</h2>
-			<form action="" method="">
-				<input type="text" name="user" placeholder="Username" class="input-control"> 
-				<input type="password" name="user" placeholder="Password" class="input-control"> 
-				<button type="submit" class="btn"><a href="{{ url('/home')}}">Login</a></button>
-			</form>
-		</div>
-	</body>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="{{url('beranda')}}" method='get'><b>Meramput Shop</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
 
-	</html>
+      <form action="{{url('beranda')}}" method="get">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      <!-- /.social-auth-links -->
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
 
+<!-- jQuery -->
+<script src="{{url('public')}}/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="{{url('public')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
 
-
-
+</body>
+</html>

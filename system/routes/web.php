@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
+
+Route::get('/registrasi', function () {
+    return view('registrasi');
+});
 
 Route::get('/home', function () {
     return view('home');
@@ -31,43 +38,32 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/contack', function () {
+    return view('contack');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/index', function () {
+    return view('index');
 });
 
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('template', function(){
+    return view('template.base');
 });
 
-Route::get('/produk', function () {
-    return view('produk');
-});
-
-Route::get('/beranda', function () {
+Route::get('beranda', function(){
     return view('beranda');
 });
 
-Route::get('/kategorilokal', function () {
-    return view('kategorilokal');
+Route::get('produk', function(){
+    return view('produk');
 });
 
-Route::get('/kategoriluar', function () {
-    return view('kategoriluar');
+Route::get('login', function () {
+    return view('login');
 });
 
-Route::get('/promo', function () {
-    return view('promo');
-});
-
-Route::get('/suplier', function () {
-    return view('suplier');
-});
-
-Route::get('/register_adm', function () {
-    return view('register_adm');
-});
+Route::get('beranda', [HomeController::class, 'showBeranda']);
+Route::get('kategori', [HomeController::class, 'showKategori']);
+Route::get('login', [AuthController::class, 'showLogin']);
+Route::get('produk', [ProdukController::class, 'index']);
 
